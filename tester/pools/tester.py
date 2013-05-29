@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 import sys, urllib, urllib2
 from StringIO import StringIO
 import html2text
