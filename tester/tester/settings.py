@@ -1,5 +1,5 @@
 # Django settings for tester project.
-import os.paths
+import os.path
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
