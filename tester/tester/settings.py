@@ -1,6 +1,5 @@
 # Django settings for tester project.
 import os.path
-from tester import TOP_DIR
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -112,13 +111,24 @@ PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
 
 
 TEMPLATE_DIRS = ( 
-    os.path.join(TOP_DIR, "templates"),
-    os.path.join(TOP_DIR, "pools/templates"),
+    os.path.join(PROJECT_DIR, "templates"),
+    os.path.join(PROJECT_DIR, "pools/templates"),
     
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.contrib.messages.context_processors.messages",
+)
+
 
 INSTALLED_APPS = (
     'django.contrib.auth',
