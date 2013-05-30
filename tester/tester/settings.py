@@ -1,5 +1,6 @@
 # Django settings for tester project.
 import os.path
+from tester import TOP_DIR
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -111,8 +112,8 @@ PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
 
 
 TEMPLATE_DIRS = ( 
-    os.path.join(PROJECT_DIR, "templates"),
-    os.path.join(PROJECT_DIR, "pools/templates"),
+    os.path.join(TOP_DIR, "templates"),
+    os.path.join(TOP_DIR, "pools/templates"),
     
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
